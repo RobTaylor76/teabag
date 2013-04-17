@@ -7,6 +7,8 @@ feature "installing teabag with the generator", aruba: true do
     run_simple("bundle exec rails new testapp --skip-bundle")
     cd("testapp")
     append_to_file("Gemfile", %{\ngem "teabag", path: "#{File.expand_path('../../../', __FILE__)}"\n})
+    append_to_file("Gemfile", %{\ngem "execjs"\n})
+    append_to_file("Gemfile", %{\ngem "therubyracer"\n})
     run_simple("bundle install --local")
   end
 

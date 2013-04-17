@@ -19,8 +19,11 @@ gem "uglifier"
 
 group :development, :test do
   gem "rspec-rails"
-  gem "capybara"
+  gem "capybara", "~> 1.1"
   gem "aruba"
+  gem "therubyracer"
+  gem "execjs"
+  gem "rspec", "= 2.12.0"
 
   gem "poltergeist"
 end
